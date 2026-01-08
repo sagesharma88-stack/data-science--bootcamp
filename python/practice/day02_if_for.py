@@ -52,7 +52,7 @@ print(f"-F: {f} students")
 product_names = ["Apples", "Bananas", "Oranges", "Pears", "Grapes"]
 stock_levels = [20, 50, 15, 5, 8]
 
-minimum_stock = 10  # Minimum stock before reordering
+minimum_stock = 10  #Minimum stock before reordering
 reorder_list = []
 for products in range(len(product_names)):
     if stock_levels[products] < 10:
