@@ -22,10 +22,6 @@ book.borrow_item()
 book.return_item()
 
 #Task 2.Create Book class (inherits LibraryItem) with author attribute
-class LibraryItem:
-    def __init__(self,title):
-        self.title = title
-        self.is_borrowed = False
 class Book(LibraryItem): 
     """Represents a book, inherits title and is_borrowed from LibraryItem, adds author."""
     def __init__(self,title,author):
@@ -35,15 +31,25 @@ book = Book("The Magic Of Thinking Big", "David Schwartz")
 print(book.title)
 print(book.author)
 
-# Task 3: Create Journal class (inherits LibraryItem) with issue_number attribute
-class LibraryItem:
-    def __init__(self,title):
-        self.title = title
-        self.is_borrowed = False
+#Task 3.Create Journal class (inherits LibraryItem) with issue_number attribute
 class Journal(LibraryItem):
     """Represents a journal, inherits title and is_borrowed from LibraryItem, adds issue_number."""
     def __init__(self,title,issue_number):
         super().__init__(title)
         self.issue_number = issue_number
 journal =Journal("Nature",50)
-print(f"The book {journal.title} has number {journal.issue_number} issue")
+print(f"The journal {journal.title} has number {journal.issue_number} issue")
+
+#Task 4.Borrow the same book twice and handle the exception
+try:
+    book.borrow_item()
+    book.borrow_item()  #It will raise an exception
+except Exception as e:
+    print(e)
+
+#Task 5. Return an un-borrowed journal and handle the exception
+
+try:
+    journal.return_item()  #It will raise an exception
+except Exception as e:
+    print(e)
