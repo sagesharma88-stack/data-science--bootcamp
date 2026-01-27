@@ -3,7 +3,7 @@
 
 #Task 1. Reading a file and building a dictionary
 #Reading a file(customers.txt) to save the data in a dictionary
-customer_record = {}                                     #creating an empty dictionary
+customer_record = {}                                     #Creating an empty dictionary
 
 with open("customers.txt","r") as f:                     #Reading the customers.txt file
     for record_lines in f:

@@ -1,5 +1,5 @@
 #Day2 Pracice
-
+# Topic List, If-Condtion, for-loop 
 #Task 1. Count numbers of items from a list
 avengers = ['Iron Man', 'Captain America', 'Black Widow', 'Hulk', 'Thor', 'Hawkeye']
 print(len(avengers))
